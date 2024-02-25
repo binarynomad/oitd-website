@@ -1,5 +1,5 @@
 ---
-title: Main Page
+title: Open I.T. Design (OITD)
 ---
 
 ## Welcome
