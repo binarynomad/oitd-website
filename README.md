@@ -1,3 +1,3 @@
 # oitd-website
 
-General website for OITD
+General website for OITD README

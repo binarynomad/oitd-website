@@ -1,8 +1,16 @@
 ---
-title: Hello World
-layout: default
+title: Main Page
 ---
 
-Hello World
+## Welcome
 
-_Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
+Open I.T. Design is an I.T. consultancy, based out of the San Francisco Bay Area. We have over 15 years of experience, providing I.T. project implementation and systems support.
+
+## IT Projects
+
+We help our clients evaluate their existing IT infrastructure in order to implement new projects, re-engineer existing systems, optimize performance, and identify possible cost savings.
+
+Remote Monitoring & Support Services
+
+For Windows based system (servers & desktops) we now offer plans that include enterprise anti-virus, anti-spyware, patch management, remote access, help desk support, and more.
+
