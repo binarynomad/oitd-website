@@ -2,7 +2,7 @@
 title: Open I.T. Design (OITD)
 ---
 
-## Welcome
+# Welcome
 
 Open I.T. Design is an I.T. consultancy, based out of the San Francisco Bay Area. We have over 15 years of experience, providing I.T. project implementation and systems support.
 
