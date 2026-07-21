@@ -21,4 +21,6 @@ Repo for designing and building the new business website.
 1. Fill in `BRIEF.md` with raw content and business data.
 2. Use `PLAN.md` to decide stack + hosting.
 3. Build into `site/`.
-4. Sync/deploy `site/` only.
+4. Deploy with `./deploy.sh` — pushes `main` and publishes `site/` to the `gh-pages` branch of [binarynomad/oitd-website](https://github.com/binarynomad/oitd-website), served at https://oitd.net via GitHub Pages.
+
+The old Jekyll site is archived at `binarynomad/oitd-website-jekyll` (local copy: `~/dev/my-web/oitd-website`).
