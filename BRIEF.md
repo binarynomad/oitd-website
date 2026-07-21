@@ -30,7 +30,7 @@
   - Shadow IT: auditing systems for full visibility into IT and shadow-IT structures
   - Cost optimization: discovering where companies underutilize services or have too much IT sprawl, and creating cost savings
   - AI adoption: helping companies evaluate and deploy AI tooling and agentic workflows (vendor/model selection across providers, automation buildouts)
-  - Office build-outs: acting as project manager to coordinate contractors building out physical spaces, including network wiring, HVAC, and electrical; new office design, server rooms, Wi-Fi, security systems, door access
+  - Office build-outs: designs and architects the IT infrastructure, then helps with implementation by coordinating and managing the project (contractors, network wiring, HVAC, electrical, server rooms, Wi-Fi, security systems, door access)
 - What makes you different:
   - In business since 2007; deep cross-platform experience (DOS, Windows, Linux, macOS — prefers Linux & macOS)
   - Extensive experience with AWS, telephony, VoIP, security systems, IT infrastructure, and data centers
@@ -56,7 +56,7 @@
   - Experience across all major operating systems (DOS, Windows, Linux, macOS), with a preference for Linux and macOS.
   - Works mainly with remote-based clients whose infrastructure lives in the cloud.
   - Deep background in AWS, telephony, VoIP systems, security systems, IT infrastructure, and data centers.
-  - Has project-managed physical build-outs, coordinating contractors across network wiring, HVAC, and electrical to deliver office spaces, server rooms, Wi-Fi, and door access systems.
+  - For office build-outs: designs and architects the IT infrastructure, then helps implement it by coordinating and managing the project (contractors, network wiring, HVAC, electrical, Wi-Fi, security systems, door access).
   - Always works closely with facilities, security, engineering, and finance.
 - Elevator pitch:
   - Many companies start small and grow organically, with little structure or planning for future needs and compliance requirements. Open IT Design builds the frameworks that let them grow into larger, more capable companies.
