@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Node / build
+node_modules/
+dist/
+.cache/
+
+# Env / secrets
+.env
+.env.*
+
+# Dropbox sync artifacts
+*.dropbox
+Icon?
