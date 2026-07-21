@@ -26,7 +26,7 @@ Single-page marketing site for Open IT Design, an IT consultancy run by Brian Hu
 
 ## Page Sections (top → bottom)
 
-See `STRUCTURE.md` for detail. Summary:
+See `STRUCTURE.md` for detail. Summary (8 sections, matching STRUCTURE.md):
 
 1. **Hero** — logo, headline, subheadline (consultancy positioning from BRIEF source copy), Calendly CTA
 2. **About** — Brian, photo, since 2007, Bay Area/remote-first, cross-platform + AWS/VoIP/data-center depth
@@ -37,7 +37,22 @@ See `STRUCTURE.md` for detail. Summary:
 7. **Contact/CTA** — Calendly (button or embed), LinkedIn
 8. **Footer** — © Open IT Design, since 2007, LinkedIn
 
-Global: sticky anchor nav, repeated CTA, mobile-responsive, dark or light professional theme.
+Global: sticky anchor nav (About · Services · Technologies · Who I Help · How It Works · Contact), repeated CTA, mobile-responsive.
+
+## Design Decisions (resolved from critique — see docs/CRITIQUE.md)
+
+- **Voice:** first person singular ("I") everywhere — honest for a solo consultancy. Legacy "we" copy gets rewritten.
+- **Theme:** light, professional. Brand color derived from logo blue (~#2E86C8); white logo glyph works on blue/white backgrounds (PNGs have alpha).
+- **Fonts:** system font stack (no CDN dependency).
+- **Calendly:** button/link only — NO inline embed (privacy/CCPA, file:// compat, performance).
+- **Logos:** `oitd-logo-1.png` (600×600 mark) → favicon + nav; `oitd-title-20210422.png` (1452×324 wordmark) → hero. (Pending Brian's confirmation the 2021 wordmark is current branding.)
+- **Tech grid:** cap at ~15–20 names a buyer would recognize; obscure agentic tools folded into an "AI & agentic workflows" services line instead.
+- **Dates:** use "since 2007" everywhere; © year computed in JS.
+- **Hero requirement:** subheadline must name audience + outcome (SMBs → structure to scale, cost savings); headline alone is too generic.
+- **SEO:** drafted in BRIEF.md (title, meta description, keywords). Add JSON-LD `ProfessionalService` + `Person`, OG tags, 1200×630 OG image generated from logo, canonical, robots.txt, sitemap.xml.
+- **A11y additions:** keyboard-operable mobile menu with `aria-expanded`, visible focus states, skip-to-content link, single `h1`, `prefers-reduced-motion` respected.
+- **Analytics:** privacy-friendly (Cloudflare Web Analytics or Plausible) + UTM params on Calendly links.
+- **Contact:** Calendly + LinkedIn for now; adding a public email (e.g. hello@oitd.net) before launch is recommended (conversion fallback).
 
 ## Content Rules
 
@@ -62,14 +77,22 @@ Global: sticky anchor nav, repeated CTA, mobile-responsive, dark or light profes
 1. [x] BRIEF.md filled in
 2. [x] Structure decided (single page)
 3. [x] Stack chosen (static, no framework)
-4. [ ] Plan critiqued by second agent (blind-spot review)
+4. [x] Plan critiqued by second agent (blind-spot review) — docs/CRITIQUE.md, fixes applied
 5. [ ] v1 built in `site/`
 6. [ ] Review + iterate
 7. [ ] Deploy + DNS for oitd.net
 
-## Open Questions
+## Pre-Deploy DNS Checklist (oitd.net already serves a live site)
 
-- Hosting provider + DNS for oitd.net (registrar? where is the domain managed?)
-- Brand colors/fonts — derive from logo (`assets/logos/`) unless directed otherwise
-- Email address to list publicly? (currently Calendly-only)
-- Calendly inline embed vs. button-only
+- [ ] Identify registrar + DNS host for oitd.net
+- [ ] Inventory ALL existing DNS records — especially MX, SPF, DKIM, DMARC (do NOT break email auth)
+- [ ] Decide www → apex redirect
+- [ ] Choose host (candidate: Cloudflare Pages or Netlify; GH Pages complicates apex domains)
+- [ ] Verify HTTPS + redirects after cutover
+
+## Open Questions (need Brian's input)
+
+- Registrar/DNS host for oitd.net? Does email currently route through this domain (MX records)?
+- Is the 2021 title wordmark still current branding?
+- Public email address to list (e.g. hello@oitd.net)? Recommended before launch.
+- Confirm https://calendly.com/oitd shows a "free intro call" event type (link verified live 2026-07-21).

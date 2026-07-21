@@ -25,13 +25,15 @@
    - Shadow-IT audits & cost optimization (sprawl, underutilized services)
    - Office build-outs (server rooms, Wi-Fi, security, door access)
 
-4. **Who I Help**
+4. **Technologies** — compact grid (~15–20 recognizable names from BRIEF Tech Stack; AI featured)
+
+5. **Who I Help**
    - Sweet spot: SMBs building structure to scale
    - Range: solo companies → 20,000-employee utilities
    - Works with facilities, security, and finance
 
 5. **How It Works / Engagement**
-   - Free intro call (call or in person) → tech-stack evaluation → projected timeline, cost, availability
+   - Free intro call (call or in person) → honest assessment of fit, then projected timeline, cost, availability
    - Hourly billing in 15-minute increments
 
 6. **Contact / CTA**
@@ -43,6 +45,6 @@
    - LinkedIn link
 
 ## Global Elements
-- Sticky anchor nav: About · Services · Who I Help · How It Works · Contact
-- Logo in nav: `assets/logos/`
-- Repeated CTA button throughout (Calendly)
+- Sticky anchor nav: About · Services · Technologies · Who I Help · How It Works · Contact
+- Logo in nav: `assets/logos/oitd-logo-1.png` (mark); wordmark `oitd-title-20210422.png` in hero
+- Repeated CTA button throughout (Calendly); soft secondary CTA: Connect on LinkedIn

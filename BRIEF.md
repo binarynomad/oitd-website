@@ -29,6 +29,7 @@
   - Identity & access: integrating HR systems with identity providers, linking to all other systems
   - Shadow IT: auditing systems for full visibility into IT and shadow-IT structures
   - Cost optimization: discovering where companies underutilize services or have too much IT sprawl, and creating cost savings
+  - AI adoption: helping companies evaluate and deploy AI tooling and agentic workflows (vendor/model selection across providers, automation buildouts)
   - Office build-outs: designing new office spaces, provisioning wiring contractors, building server rooms, installing security systems, deploying Wi-Fi, setting up door access systems
 - What makes you different:
   - In business since 2007; deep cross-platform experience (DOS, Windows, Linux, macOS — prefers Linux & macOS)
@@ -76,9 +77,9 @@
 - Photo assets (drop in `assets/photos/`): ✅ uploaded — `oitd-profile-2-square.jpg` (headshot of Brian)
 
 ## SEO
-- Keywords:
-- Meta description draft:
-- Page title ideas:
+- Keywords: IT consultant SF Bay Area, IT architect consultant, SOC 2 readiness consultant, DMARC email deliverability consultant, fractional IT leadership, cloud infrastructure consultant, IT cost optimization
+- Meta description draft: "Open IT Design helps small and medium-sized businesses build IT structure that scales — cloud infrastructure, SOC 2 readiness, email deliverability, and cost optimization. In business since 2007. Book a free intro call."
+- Page title ideas: "Open IT Design — IT Architecture & Infrastructure Consulting | SF Bay Area"
 
 ## Tech Stack
 <!-- Current systems Brian works with — representative, not exhaustive -->
