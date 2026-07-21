@@ -14,7 +14,7 @@
 - Title: IT Architect
 
 ## Contact & Links
-- Email: TBD (primary CTA is Calendly)
+- Email: hello@oitd.net (primary CTA remains Calendly)
 - Phone: TBD
 - Address: TBD
 - Socials (LinkedIn, Instagram, X, etc.): LinkedIn — https://www.linkedin.com/in/bhuddleston/

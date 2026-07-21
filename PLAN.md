@@ -45,7 +45,7 @@ Global: sticky anchor nav (About · Services · Technologies · Who I Help · Ho
 - **Theme:** light, professional. Brand color derived from logo blue (~#2E86C8); white logo glyph works on blue/white backgrounds (PNGs have alpha).
 - **Fonts:** system font stack (no CDN dependency).
 - **Calendly:** button/link only — NO inline embed (privacy/CCPA, file:// compat, performance).
-- **Logos:** `oitd-logo-1.png` (600×600 mark) → favicon + nav; `oitd-title-20210422.png` (1452×324 wordmark) → hero. (Pending Brian's confirmation the 2021 wordmark is current branding.)
+- **Logos:** `oitd-logo-1.png` (600×600 mark) → favicon + nav; `oitd-title-20210422.png` (1452×324 wordmark) → hero (valid branding, optional — can be removed for a mark-only look).
 - **Tech grid:** cap at ~15–20 names a buyer would recognize; obscure agentic tools folded into an "AI & agentic workflows" services line instead.
 - **Dates:** use "since 2007" everywhere; © year computed in JS.
 - **Hero requirement:** subheadline must name audience + outcome (SMBs → structure to scale, cost savings); headline alone is too generic.
@@ -84,15 +84,16 @@ Global: sticky anchor nav (About · Services · Technologies · Who I Help · Ho
 
 ## Pre-Deploy DNS Checklist (oitd.net already serves a live site)
 
-- [ ] Identify registrar + DNS host for oitd.net
-- [ ] Inventory ALL existing DNS records — especially MX, SPF, DKIM, DMARC (do NOT break email auth)
+- [x] Identify registrar + DNS host for oitd.net — registrar: Hover; email: Google Workspace MX
+- [ ] Inventory ALL existing DNS records at Hover — especially MX (Google Workspace), SPF, DKIM, DMARC (do NOT break email auth)
 - [ ] Decide www → apex redirect
-- [ ] Choose host (candidate: Cloudflare Pages or Netlify; GH Pages complicates apex domains)
-- [ ] Verify HTTPS + redirects after cutover
+- [x] Choose host — GitHub Pages to start (may later move to S3 / DigitalOcean; site stays host-agnostic static files). GH Pages apex: A records to GitHub IPs + CNAME for www; leave MX/TXT untouched
+- [ ] Verify HTTPS (enforce HTTPS in GH Pages) + redirects after cutover
 
-## Open Questions (need Brian's input)
+## Open Questions (resolved 2026-07-21)
 
-- Registrar/DNS host for oitd.net? Does email currently route through this domain (MX records)?
-- Is the 2021 title wordmark still current branding?
-- Public email address to list (e.g. hello@oitd.net)? Recommended before launch.
-- Confirm https://calendly.com/oitd shows a "free intro call" event type (link verified live 2026-07-21).
+- **Registrar/DNS:** Hover. **Email:** Google Workspace MX on oitd.net — must be preserved during any DNS change.
+- **Wordmark:** 2021 title wordmark still valid branding, but optional — currently in hero; can swap to mark-only.
+- **Public email:** hello@oitd.net — added to contact section + footer.
+- **Calendly:** profile shows time-range booking options, all free; no "free intro call" event type. CTA copy stays ("Book a free intro call") since all options are uncharged intro meetings. Link verified live 2026-07-21.
+- **Hosting:** GitHub Pages initially; possibly S3 or DigitalOcean (droplet/Docker or static) later.
