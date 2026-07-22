@@ -72,3 +72,35 @@
     sections.forEach(function (s) { obs.observe(s); });
   }
 })();
+
+/* Theme toggle: explicit choice persists in localStorage; if the visitor has
+   never chosen, the theme follows the OS preference live. */
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var root = document.documentElement;
+
+  function current() { return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+  function syncLabel() {
+    btn.setAttribute('aria-label', current() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  syncLabel();
+
+  btn.addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncLabel();
+  });
+
+  // Follow OS changes only while the visitor hasn't made an explicit choice
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function (e) {
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (err) {}
+    if (stored !== 'light' && stored !== 'dark') {
+      root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      syncLabel();
+    }
+  });
+})();
