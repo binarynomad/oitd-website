@@ -380,3 +380,62 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* ==========================================================================
+   Dark theme (Tokyo Night-inspired) — applied via <html data-theme="dark">.
+   Base theme is light; these rules only override what changes.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  --blue: #7AA2F7;
+  --blue-dark: #5F87E0;
+  --blue-soft: #1F2440;
+  --blue-soft-2: #3B4261;
+  --ink: #C0CAF5;
+  --ink-soft: #A9B1D6;
+  --muted: #7982A9;
+  --line: #292E42;
+  --bg: #1A1B26;
+  --bg-alt: #16161E;
+  --shadow: 0 1px 3px rgba(0, 0, 0, .35), 0 4px 16px rgba(0, 0, 0, .25);
+}
+
+:root[data-theme="dark"] .site-header { background: rgba(26, 27, 38, .88); }
+:root[data-theme="dark"] .hero { background: linear-gradient(180deg, #1F2440 0%, var(--bg) 100%); }
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .tech-grid li,
+:root[data-theme="dark"] .stat,
+:root[data-theme="dark"] .step { background: #1F2335; }
+:root[data-theme="dark"] .btn-primary { color: #16161E; }
+:root[data-theme="dark"] .btn-primary:hover { color: #16161E; }
+:root[data-theme="dark"] .site-footer { background: #13141C; color: #9AA3C0; }
+
+@media (max-width: 860px) {
+  :root[data-theme="dark"] .main-nav { background: var(--bg); }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--blue); border-color: var(--blue-soft-2); }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Wordmark swap: dark-navy wordmark for light theme, lavender for dark */
+.wordmark-for-dark { display: none; }
+:root[data-theme="dark"] .wordmark-for-light { display: none; }
+:root[data-theme="dark"] .wordmark-for-dark { display: block; }
