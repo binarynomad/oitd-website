@@ -104,3 +104,15 @@
     }
   });
 })();
+
+/* Email de-obfuscation: the address is stored reversed in data-e so scrapers
+   harvesting raw HTML/mailto links find nothing. JS restores the real address
+   and mailto on load; without JS a human-readable form remains visible. */
+(function () {
+  document.querySelectorAll('.js-email[data-e]').forEach(function (el) {
+    var addr = el.getAttribute('data-e').split('').reverse().join('');
+    el.textContent = addr;
+    el.setAttribute('href', 'mailto:' + addr);
+    el.removeAttribute('data-e');
+  });
+})();
