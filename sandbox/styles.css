@@ -1,23 +1,21 @@
 /* Open IT Design — single-page site styles
-   DARK SANDBOX THEME: Tokyo Night-inspired. Deep blue-purple base, lavender text,
-   bright blue accent tuned to complement the brand logo (#2E86C8) and profile photo. */
+   Light theme, brand blue #2E86C8, system font stack. No external deps. */
 
 :root {
-  --blue: #7AA2F7;          /* tokyonight blue */
-  --blue-dark: #5F87E0;
-  --blue-soft: #1F2440;     /* soft panel tint */
-  --blue-soft-2: #3B4261;   /* borders w/ blue tint */
-  --ink: #C0CAF5;           /* primary text (lavender) */
-  --ink-soft: #A9B1D6;      /* secondary text */
-  --muted: #7982A9;         /* tertiary text */
-  --line: #292E42;          /* hairlines */
-  --bg: #1A1B26;            /* page background (tokyonight-night) */
-  --bg-alt: #16161E;        /* alternating sections */
-  --bg-card: #1F2335;       /* cards/steps/stats */
+  --blue: #2E86C8;
+  --blue-dark: #1F6396;
+  --blue-soft: #EAF3FA;
+  --blue-soft-2: #DCEBFA;
+  --ink: #1A2A36;
+  --ink-soft: #3A4B57;
+  --muted: #5E6B75;
+  --line: #E2E8EE;
+  --bg: #FFFFFF;
+  --bg-alt: #F6F9FC;
   --maxw: 1100px;
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 1px 3px rgba(0, 0, 0, .35), 0 4px 16px rgba(0, 0, 0, .25);
+  --shadow: 0 1px 3px rgba(26, 42, 54, .06), 0 4px 16px rgba(26, 42, 54, .04);
   --focus: 2px solid var(--blue);
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -66,7 +64,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(26, 27, 38, .88);
+  background: rgba(255, 255, 255, .92);
   backdrop-filter: saturate(180%) blur(8px);
   -webkit-backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid var(--line);
@@ -129,8 +127,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   white-space: nowrap;
 }
 .btn:hover { text-decoration: none; }
-.btn-primary { background: var(--blue); color: #16161E; }
-.btn-primary:hover { background: var(--blue-dark); color: #16161E; }
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: var(--blue-dark); }
 .btn-ghost { background: transparent; color: var(--blue); border-color: var(--blue-soft-2); }
 .btn-ghost:hover { background: var(--blue-soft); }
 .btn-lg { font-size: 17px; padding: 14px 26px; border-radius: var(--radius); }
@@ -153,7 +151,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .menu-bar { display: block; height: 2px; width: 100%; background: var(--ink); border-radius: 2px; }
 
 /* Hero */
-.hero { background: linear-gradient(180deg, #1F2440 0%, var(--bg) 100%); border-bottom: 1px solid var(--line); }
+.hero { background: linear-gradient(180deg, var(--blue-soft) 0%, #fff 100%); border-bottom: 1px solid var(--line); }
 .hero-inner {
   display: flex;
   flex-direction: column;
@@ -223,7 +221,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   gap: 20px;
 }
 .card {
-  background: var(--bg-card);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 26px 24px;
@@ -243,7 +241,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   gap: 12px;
 }
 .tech-grid li {
-  background: var(--bg-card);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 14px 18px;
@@ -264,7 +262,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .help-body p:last-child { margin-bottom: 0; }
 .help-stats { display: flex; flex-direction: column; gap: 18px; }
 .stat {
-  background: var(--bg-card);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 20px 22px;
@@ -287,7 +285,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   counter-reset: step;
 }
 .step {
-  background: var(--bg-card);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 28px 26px;
@@ -319,7 +317,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 
 /* Footer */
-.site-footer { background: #13141C; color: #9AA3C0; padding: 32px 0; }
+.site-footer { background: var(--ink); color: #cdd6de; padding: 32px 0; }
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
@@ -342,7 +340,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--bg);
+    background: #fff;
     border-bottom: 1px solid var(--line);
     padding: 8px 24px 20px;
     margin: 0;
@@ -382,3 +380,62 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* ==========================================================================
+   Dark theme (Tokyo Night-inspired) — applied via <html data-theme="dark">.
+   Base theme is light; these rules only override what changes.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  --blue: #7AA2F7;
+  --blue-dark: #5F87E0;
+  --blue-soft: #1F2440;
+  --blue-soft-2: #3B4261;
+  --ink: #C0CAF5;
+  --ink-soft: #A9B1D6;
+  --muted: #7982A9;
+  --line: #292E42;
+  --bg: #1A1B26;
+  --bg-alt: #16161E;
+  --shadow: 0 1px 3px rgba(0, 0, 0, .35), 0 4px 16px rgba(0, 0, 0, .25);
+}
+
+:root[data-theme="dark"] .site-header { background: rgba(26, 27, 38, .88); }
+:root[data-theme="dark"] .hero { background: linear-gradient(180deg, #1F2440 0%, var(--bg) 100%); }
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .tech-grid li,
+:root[data-theme="dark"] .stat,
+:root[data-theme="dark"] .step { background: #1F2335; }
+:root[data-theme="dark"] .btn-primary { color: #16161E; }
+:root[data-theme="dark"] .btn-primary:hover { color: #16161E; }
+:root[data-theme="dark"] .site-footer { background: #13141C; color: #9AA3C0; }
+
+@media (max-width: 860px) {
+  :root[data-theme="dark"] .main-nav { background: var(--bg); }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--blue); border-color: var(--blue-soft-2); }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Wordmark swap: dark-navy wordmark for light theme, lavender for dark */
+.wordmark-for-dark { display: none; }
+:root[data-theme="dark"] .wordmark-for-light { display: none; }
+:root[data-theme="dark"] .wordmark-for-dark { display: block; }
